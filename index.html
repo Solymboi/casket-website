@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casket Store</title>
+  <link rel="stylesheet" href="iyimide 2.css">
+</head>
+<body>
+  
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#caskets">Caskets</a></li>
+      <li><a href="#ambulance">Ambulance</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+            <p>Premium quality caskets available for order.</p>
+<br>   
+
+<p> At YUMYTH A-Z FUNERAL SERVICES, our home is a sanctuary of
+    compassion and dignity, where families can find solace
+    and support during life's most challenging moments.
+    With empathy and care, we honor the lives of loved ones,
+    creating meaningful experience that celebrate their legacy
+    and provide comfort to those who remain.
+</p>
+
+            <img src="images-1.jpeg">
+      </section>
+
+  <section id="about">
+    
+    <h1>Welcome to Our Casket Store</h1>
+    <p>yumyth a-z funeral services was founded
+        in the year 2009 By Oluwasegun David Aina 
+
+       <img src="real ceo.jpg" class="About-img">
+         <p>OLUWASEGUN DAVID AINA<br> CEO</p>
+         <br>
+    <p>We provide top quality and affordable caskets.</p>
+  </section>
+
+  <section id="caskets">
+    <h1>Our Caskets</h1>
+    <div class="store">
+      <div class="product">
+        <img src="Dome.jpg" alt="Casket 1">
+                <h3>Dome Casket</h3>
+        <p>#550,000</p>
+        <button onclick="addToCart('Dome Casket', 550000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Dome 2.jpg" alt="Casket 1">
+                <h3>Dome Casket</h3>
+        <p>#550,000</p>
+        <button onclick="addToCart('Dome Casket', 550000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="background 1.jpg" alt="Casket 1">
+                <h3>Dome Casket</h3>
+        <p>#550,000</p>
+        <button onclick="addToCart('Dome Casket', 550000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="try 2.jpg" alt="Casket 1">
+                <h3>Dome Casket</h3>
+        <p>#550,000</p>
+        <button onclick="addToCart('Dome Casket', 550000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Flat Top.jpg" alt="Casket 2">
+        <h3>Flat Top Casket</h3>
+        <p>#450,000</p>
+        <button onclick="addToCart('Flat Top Casket', 450000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="background 2.jpg" alt="Casket 1">
+                <h3>Bible Casket</h3>
+        <p>#500,000</p>
+        <button onclick="addToCart('Bible Casket', 500000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="8-Edges.jpg" alt="Casket 1">
+                <h3>8-Edges Casket</h3>
+        <p>#750,000</p>
+        <button onclick="addToCart('8-8-Edges Casket', 750000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Ecomog show.jpg" alt="Casket 1">
+                <h3>Ecomog show Casket</h3>
+        <p>#250,000</p>
+        <button onclick="addToCart('Ecomog show Casket', 250000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Bible.jpg" alt="Casket 3">
+        <h3>Bible Casket</h3>
+        <p>#500,000</p>
+        <button onclick="addToCart('Bible Casket', 500000)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>🛒 Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <h3>Total: #<span id="total">0</span></h3>
+      <button class="checkout">Order Now</button>
+    </div>
+  </section>
+
+
+  <section id="ambulance">
+    <h1>Ambluance Services</h1>
+    <p>Choose your best Ambulance vehicle</p>
+    <div class="product">
+        <img src="ambulance 2.jpg" alt="Casket 1">
+                <h3>Ambluance</h3>
+        <p>Depending on the location</p>
+        <button onclick="addToCart('Ambluance', )">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="ambulance 1.jpg" alt="Casket 1">
+                <h3>Ambluance</h3>
+        <p>Depending on the location</p>
+        <button onclick="addToCart('Ambluance', )">Add to Cart</button>
+      </div>
+  </section>
+
+
+
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Get in touch for inquiries and orders.</p>
+    <div class="contact-links">
+      <a href="https://wa.me/2348140609366" target="_blank" class="whatsapp"> chat on Whatsapp</a>
+      <a href="tel:+2348053371648" class="phone">Call us</a>
+      <a href="mailto:yomythfunerals@gmail.com" class="email">Email Us</a>
+    </div>
+  </section>
+
+  
+
+  <script>
+  // Navbar scroll + active link
+  const nav = document.getElementById("navbar");
+  const links = document.querySelectorAll("nav ul li a");
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 60;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // Cart system
+  let cart = [];
+  let total = 0;
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    total += price;
+    updateCart();
+  }
+
+  function formatNaira(amount) {
+    return amount.toLocaleString("en-NG", { style: "currency", currency: "NGN" });
+  }
+
+  function updateCart() {
+    const cartItems = document.getElementById('cartItems');
+    const totalEl = document.getElementById('total');
+
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+      let li = document.createElement('li');
+      li.textContent = `${item.name} - ${formatNaira(item.price)}`;
+      cartItems.appendChild(li);
+    });
+
+    totalEl.textContent = formatNaira(total);
+  }
+
+  // WhatsApp order function
+  document.querySelector(".checkout").addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+    let message = "New Order:%0A";
+    cart.forEach(item => {
+      message += `${item.name} - ${formatNaira(item.price)}%0A`;
+    });
+    message += `%0ATotal: ${formatNaira(total)}%0A`;
+    message += "Please confirm my order";
+
+    // Replace with business WhatsApp number (with country code, no + or spaces)
+    let phone = "2348140609366";
+
+    let url = `https://wa.me/${phone}?text=${message}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+
+
+<footer>
+    <h1>YUMYTH A-Z FUNERAL SERVICES</h1>
+    <p>Taiwo Corner Bus Stop, Opposite Itura Event Centre,
+        Ijoko Road, Ifo Local Govt., Ogun State
+        <br>Tel: 08140609366, 08053371648. E-mail: yomythfunerals@gmail.com
+    </p>
+  </footer>
+
+</body>
+</html>
