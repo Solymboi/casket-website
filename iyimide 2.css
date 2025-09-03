@@ -12,10 +12,18 @@ body {
 footer {
     text-align: center;
     color: black;
+    overflow: hidden; /* clear floats */
 }
 footer p {
     font-weight: bolder;
     color: black;
+.float-text {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+.float-text:hover {
+  transform: translate(-5px); /* makes it "float" up */
+}
 }
 /*About Images - made moderate size */
 .About-img {
@@ -63,6 +71,13 @@ nav ul li a.active {
 }
 
 /*Home Images - made moderaate size */
+.home-img {
+    display: flexbox;
+    margin: 20px auto;
+    max-width: 400px;
+    height: auto;
+    justify-content: space-between;
+}
 
 
 
@@ -119,6 +134,11 @@ section {
   margin: 10px 0;
 }
 
+.product p{
+  font-weight: bold;
+  color: green;
+  margin-bottom: 8px;
+}
 .product button {
   background: #3498db;
   color: white;
